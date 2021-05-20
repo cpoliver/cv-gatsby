@@ -22,7 +22,7 @@ export type WorkHistoryItem = {
     to?: string;
   };
   location?: Location;
-  description: string | string[];
+  description: string[];
 };
 
 export type CVData = {

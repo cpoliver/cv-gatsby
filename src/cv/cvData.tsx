@@ -1,7 +1,7 @@
 import { CVData } from "./types";
 
 const getFlag = (countryCode: string) =>
-  `https://www.countryflags.io/${countryCode}/flat/64.png`;
+  `https://www.countryflags.io/${countryCode}/flat/24.png`;
 
 export const data: CVData = {
   name: "Charles P. Oliver",
@@ -87,7 +87,7 @@ export const data: CVData = {
       role: "Full-Stack Developer",
       date: { from: "2017-02-01", to: "2019-07-01" },
       location: {
-        name: "Swieqi, Malta",
+        name: "Bottighofen, Switzerland",
         latLong: ["47.6400672", "9.2112216"],
         flagUrl: getFlag("ch")
       },
