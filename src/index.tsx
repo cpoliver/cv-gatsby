@@ -1,17 +1,23 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import * as React from "react";
 import { render } from "react-dom";
-import "./styles.css";
 
 import { CV } from "./cv/CV";
 import { data } from "./cv/cvData";
 
-const App = () => <CV {...data} />;
+const theme = extendTheme({
+  typography: {
+    fonts: {
+      heading: `Karla, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+      body: `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+      mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`
+    }
+  }
+});
 
-const rootElement = document.getElementById("root");
 render(
-  <ChakraProvider>
-    <App />
+  <ChakraProvider theme={theme}>
+    <CV {...data} />
   </ChakraProvider>,
-  rootElement
+  document.getElementById("root")
 );
